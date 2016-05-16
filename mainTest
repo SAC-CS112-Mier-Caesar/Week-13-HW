@@ -1,0 +1,26 @@
+package practice1;
+import java.util.Scanner;
+
+public class MainTest {
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+		
+		Scanner input = new Scanner (System.in);
+		
+		TrippleDice object = new TrippleDice();
+		object.Throw();
+		
+		System.out.println(object);
+		
+		TrippleDice object2=(TrippleDice)object.clone();
+		System.out.println(object2);
+		object2.Throw();
+		System.out.println(object2);
+		
+		if(object.equals(object2))
+			System.out.println("The objects contain the same values");
+		else
+			System.out.println("The objects DO NOT contain the same values");
+	}
+
+}
